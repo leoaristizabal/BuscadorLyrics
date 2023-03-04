@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 *{
     padding: 0;
@@ -11,18 +11,18 @@
     --wn: #250d14;
     --wnc: #880034;
     --gr: #e92828;
-    --gd: #3f3f3f;
+    --wt: #fff;
 }
 
 body{
     background: white;
     height: 100vh;
-    font-family: 'Nunito Sans', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
+    font-family: 'Montserrat',sans-serif;
+    color: var(--wt);
 }
 
 .main-box{
-    background-color: var(--wn);
+    background: linear-gradient(to right, var(--gr), var(--wnc));
     width: 60%;
     height: 50%;
     margin: 8% auto;
@@ -65,22 +65,22 @@ input[type="text"]{
     box-sizing: border-box;
     padding: 8px 20px;
     --white: linear-gradient(white, white);
-    --gradient: linear-gradient(to right, var(--gr), var(--wnc));
+    --gradient: linear-gradient(to right, var(--wnc), var(--gr));
     border: solid 0.25rem transparent;
     background: var(--white) padding-box, var(--gradient) border-box;
 }
 
 input[type=text]:focus {
-    box-shadow: 0 0 15px 4px var(--wnc);
+    box-shadow: 0 0 8px 4px var(--wnc);
 }
 
-.search-letters{
+a.search-letters{
     width: 100%;
     margin: 0 auto;
     cursor: pointer;
     background: var(--white) padding-box, var(--gradient) border-box;
-    border: 1px solid var(--gr);
-    color: #fff;
+    border: 0.25em solid transparent;
+    color: var(--wt);
     font-weight: 600;
     transition: width 1s;
     text-decoration: none;
@@ -88,11 +88,17 @@ input[type=text]:focus {
     border-radius: 2px;
 }
 
-.search-letters:hover{
+a.search-letters:hover{
     background-color: var(--gr);
     color: #fff;
     border-radius:  8px;
     box-shadow: 0 0 5px var(--gr), 0 0 25px var(--gr), 0 0 50px var(--gr), 0 0 100px var(--gr);
+    box-sizing: border-box;
+    padding: 8px 20px;
+    --white: linear-gradient(white, white);
+    --gradient: linear-gradient(to right, var(--gr), var(--wnc));
+    border: solid 0.25rem transparent;
+    background: var(--gradient) border-box;
 }
 
 .side-right{
@@ -100,9 +106,45 @@ input[type=text]:focus {
 }
 
 .side-right h3 {
-    color: var(--gr);
+    color: var(--wt);
 }
 
 .error-mensaje{
     color: red;
 }
+
+/*Dispositivos medios*/
+
+@media (max-width: 768px) {
+    .main-box {
+      width: 90%;
+      height: auto;
+      margin: 20% auto;
+    }
+    
+    .flex-container {
+      flex-direction: column;
+      margin: 10% auto;
+    }
+    
+    .side-left {
+      width: 100%;
+    }
+    
+    .side-right {
+      width: 100%;
+    }
+  }
+/*Pantallas mas peque;as*/  
+  @media (max-width: 576px) {
+    .main-box {
+      margin: 40% auto;
+    }
+    
+    input[type="text"], .search-letters {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 14px;
+    }
+  }
+  
