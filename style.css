@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bk: #252525;
+    --wn: #250d14;
+    --wnc: #880034;
+    --gr: #e92828;
+    --gd: #3f3f3f;
+}
+
+body{
+    background: white;
+    height: 100vh;
+    font-family: 'Nunito Sans', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+.main-box{
+    background-color: var(--wn);
+    width: 60%;
+    height: 50%;
+    margin: 8% auto;
+    padding: 1rem;
+    border: 1px solid #4c1929;
+    border-radius: .5rem;
+    box-shadow: -4px 9px 25px -6px var(--wn);
+    text-align: center;
+}
+
+.main-box h2{
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    margin: 2.5% auto;
+    padding: .2rem;
+}
+
+.side-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+input[type="text"]{
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    width: 100%;
+    margin: 0 0 25px;
+    display: inline-block;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 8px 20px;
+    --white: linear-gradient(white, white);
+    --gradient: linear-gradient(to right, var(--gr), var(--wnc));
+    border: solid 0.25rem transparent;
+    background: var(--white) padding-box, var(--gradient) border-box;
+}
+
+input[type=text]:focus {
+    box-shadow: 0 0 15px 4px var(--wnc);
+}
+
+.search-letters{
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    background: var(--white) padding-box, var(--gradient) border-box;
+    border: 1px solid var(--gr);
+    color: #fff;
+    font-weight: 600;
+    transition: width 1s;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 2px;
+}
+
+.search-letters:hover{
+    background-color: var(--gr);
+    color: #fff;
+    border-radius:  8px;
+    box-shadow: 0 0 5px var(--gr), 0 0 25px var(--gr), 0 0 50px var(--gr), 0 0 100px var(--gr);
+}
+
+.side-right{
+    width: 50%;
+}
+
+.side-right h3 {
+    color: var(--gr);
+}
+
+.error-mensaje{
+    color: red;
+}
