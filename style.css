@@ -110,7 +110,8 @@ a.search-letters:hover{
 }
 
 .error-mensaje{
-    color: red;
+    color: var(--wt);
+    padding: 2.5%;
 }
 
 /*Dispositivos medios*/
