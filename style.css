@@ -31,6 +31,7 @@ body{
     border-radius: .5rem;
     box-shadow: -4px 9px 25px -6px var(--wn);
     text-align: center;
+    overflow: auto;
 }
 
 .main-box h2{
@@ -85,7 +86,6 @@ a.search-letters{
     transition: width 1s;
     text-decoration: none;
     padding: 8px 20px;
-    border-radius: 2px;
 }
 
 a.search-letters:hover{
@@ -103,16 +103,28 @@ a.search-letters:hover{
 
 .side-right{
     width: 50%;
+    padding-left: 2.5%;
+    
 }
 
-.side-right h3 {
+.side-right h3 p {
     color: var(--wt);
 }
 
 .error-mensaje{
     color: var(--wt);
-    padding: 2.5%;
 }
+
+.main-box h4 {
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.side-right p {
+  margin-bottom: 1rem;
+}
+
 
 /*Dispositivos medios*/
 
